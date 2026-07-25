@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斯洋流量学堂 | 小红书企业获客增长陪跑 · 产品手册</title>
+    <meta property="og:title" content="小红书企业获客增长陪跑 | 斯洋流量学堂">
+    <meta property="og:description" content="专注小红书企业获客增长 · 5人团队深度陪跑 · 3980元/季度 · 只做真实获客结果">
+    <meta property="og:image" content="https://proc-longest-thompson-providing.trycloudflare.com/share-thumb.jpg">
+    <meta property="og:image:width" content="1086">
+    <meta property="og:image:height" content="1448">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:url" content="https://proc-longest-thompson-providing.trycloudflare.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="斯洋流量学堂">
+    <meta itemprop="name" content="小红书企业获客增长陪跑 | 斯洋流量学堂">
+    <meta itemprop="description" content="专注小红书企业获客增长 · 5人团队深度陪跑 · 3980元/季度 · 只做真实获客结果">
+    <meta itemprop="image" content="https://proc-longest-thompson-providing.trycloudflare.com/share-thumb.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold:#9B7B3C; --gold-light:#C4A35A; --gold-dark:#7A5E28;
+            --cream:#FBF3E7; --cream-2:#F3E6D2; --paper:#FFFCF7;
+            --ink:#2D1810; --ink-2:#5D4037; --ink-3:#8D6E63;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+        html{scroll-behavior:smooth;}
+        body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;}
+        h1,h2,h3,h4{font-family:'Noto Serif SC',serif;font-weight:700;}
+        .view{display:none;}
+        .view.active{display:block;}
+
+        /* HEADER */
+        .header{background:linear-gradient(135deg,#7A5E28 0%,#9B7B3C 50%,#C4A35A 100%);color:#fff;text-align:center;padding:24px 20px 18px;position:relative;overflow:hidden;}
+        .header::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:rgba(255,255,255,0.08);border-radius:50%;}
+        .header h1{font-size:26px;letter-spacing:1px;margin-bottom:6px;}
+        .header p{font-size:13.5px;opacity:.92;}
+
+        /* TOGGLE */
+        .toggle-bar{position:sticky;top:0;z-index:100;background:rgba(251,243,231,0.9);backdrop-filter:blur(10px);display:flex;justify-content:center;padding:14px 20px;border-bottom:1px solid rgba(155,123,60,0.12);}
+        .toggle-group{display:flex;background:#fff;border-radius:30px;padding:4px;box-shadow:0 2px 12px rgba(122,94,40,0.1);}
+        .toggle-btn{padding:9px 24px;border:none;background:transparent;border-radius:26px;cursor:pointer;font-size:14px;font-weight:600;color:var(--ink-3);transition:all .3s;white-space:nowrap;}
+        .toggle-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;box-shadow:0 4px 14px rgba(155,123,60,0.3);}
+
+        /* ===== IMAGES VIEW ===== */
+        .pages-wrap{max-width:600px;margin:0 auto;padding:20px 0 40px;}
+        .page-card{margin:16px;background:var(--paper);border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(122,94,40,0.08);border:1px solid rgba(155,123,60,0.12);}
+        .page-card img{width:100%;display:block;}
+
+        .carousel-block{margin:16px;background:linear-gradient(180deg,var(--cream-2),var(--paper));border-radius:18px;padding:22px 16px 18px;}
+        .cb-head{text-align:center;margin-bottom:16px;}
+        .cb-head .bt{display:inline-block;color:var(--gold-dark);background:rgba(155,123,60,0.1);padding:4px 14px;border-radius:50px;font-size:11px;font-weight:600;letter-spacing:2px;margin-bottom:8px;}
+        .cb-head h3{font-size:21px;color:var(--ink);}
+        .carousel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;-ms-overflow-style:none;scrollbar-width:none;}
+        .carousel::-webkit-scrollbar{display:none;}
+        .slide{flex:0 0 100%;scroll-snap-align:center;overflow:hidden;}
+        .slide img{width:100%;display:block;cursor:zoom-in;}
+
+        /* LIGHTBOX */
+        .lightbox{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px);}
+        .lightbox.show{display:flex;}
+        .lightbox img{max-width:92vw;max-height:90vh;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5);transition:transform .2s;}
+        .lb-close{position:absolute;top:16px;right:18px;width:44px;height:44px;background:rgba(255,255,255,.15);border:none;border-radius:50%;color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+        .lb-close:hover{background:rgba(255,255,255,.3);}
+        .lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;background:rgba(255,255,255,.12);border:none;border-radius:50%;color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+        .lb-nav:hover{background:rgba(255,255,255,.28);}
+        .lb-prev{left:14px;}
+        .lb-next{right:14px;}
+        .lb-counter{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:13px;}
+        .cnav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:4px;}
+        .cnav button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(155,123,60,0.3);background:var(--paper);color:var(--gold-dark);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+        .cnav button:active{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;}
+        .cdots{display:flex;gap:6px;}
+        .cdots .d{width:7px;height:7px;border-radius:50%;background:rgba(155,123,60,0.25);}
+        .cdots .d.on{background:var(--gold);width:20px;border-radius:50px;}
+        .chint{text-align:center;font-size:11px;color:var(--ink-3);margin-top:8px;}
+
+        /* ===== TEXT VIEW ===== */
+        .text-wrap{max-width:600px;margin:0 auto;padding:20px 16px 40px;}
+        .t-hero{background:linear-gradient(135deg,#7A5E28,#9B7B3C);color:#fff;border-radius:20px;padding:32px 24px;text-align:center;margin-bottom:18px;}
+        .t-hero h2{font-size:24px;margin-bottom:8px;}
+        .t-hero p{font-size:13.5px;opacity:.9;margin-bottom:4px;}
+        .t-hero .price{font-size:14px;color:var(--gold-light);margin-top:10px;letter-spacing:1px;}
+        .t-hero .price b{font-size:34px;font-family:'Noto Serif SC',serif;}
+        .t-block{background:var(--paper);border:1px solid rgba(155,123,60,0.12);border-radius:18px;padding:24px 20px;margin-bottom:16px;box-shadow:0 4px 18px rgba(122,94,40,0.06);}
+        .t-block h3{font-size:19px;color:var(--ink);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+        .t-block h3::before{content:'';width:5px;height:18px;background:linear-gradient(var(--gold-light),var(--gold-dark));border-radius:3px;display:inline-block;}
+        .t-block p{font-size:14px;color:var(--ink-2);margin-bottom:8px;}
+        .t-list{list-style:none;padding:0;}
+        .t-list li{position:relative;padding:10px 0 10px 26px;font-size:14px;color:var(--ink-2);border-bottom:1px dashed rgba(155,123,60,0.15);}
+        .t-list li:last-child{border-bottom:none;}
+        .t-list li::before{content:'';position:absolute;left:4px;top:16px;width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dark));}
+        .t-list li b{color:var(--gold-dark);}
+        .t-steps{counter-reset:s;}
+        .t-steps li{position:relative;padding:12px 0 12px 46px;font-size:14px;color:var(--ink-2);border-bottom:1px dashed rgba(155,123,60,0.15);list-style:none;}
+        .t-steps li:last-child{border-bottom:none;}
+        .t-steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:11px;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;}
+        .t-steps li b{display:block;color:var(--ink);}
+        .t-case{background:var(--cream);border-radius:12px;padding:14px 16px;margin-bottom:10px;}
+        .t-case .cn{font-size:14px;font-weight:700;color:var(--gold-dark);margin-bottom:4px;}
+        .t-case .cd{font-size:13px;color:var(--ink-3);line-height:1.7;}
+        .t-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+        .t-tags span{background:rgba(155,123,60,0.1);color:var(--gold-dark);font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:50px;}
+        .t-cta{background:linear-gradient(135deg,#7A5E28,#9B7B3C);color:#fff;text-align:center;border-radius:18px;padding:28px 20px;margin-top:4px;}
+        .t-cta h3{font-size:20px;margin-bottom:6px;}
+        .t-cta p{font-size:13.5px;opacity:.85;}
+
+        .foot-note{text-align:center;font-size:12px;color:var(--ink-3);padding:24px 20px 40px;line-height:1.8;}
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <h1>小红书企业获客增长陪跑</h1>
+    <p>斯洋流量学堂 SIYANG MEDIA · 产品手册</p>
+</header>
+
+<!-- TOGGLE -->
+<div class="toggle-bar">
+    <div class="toggle-group">
+        <button class="toggle-btn active" data-view="images">图文浏览</button>
+        <button class="toggle-btn" data-view="text">文字介绍</button>
+    </div>
+</div>
+
+<!-- ===== IMAGES VIEW ===== -->
+<section id="view-images" class="view active">
+    <div class="pages-wrap">
+        <div class="page-card"><img src="assets/pages/page-01.jpg" alt=""></div>
+
+        <div class="carousel-block">
+            <div class="cb-head"><div class="bt">TEAM</div><h3>核心团队</h3></div>
+            <div class="carousel" id="teamCarousel">
+                <div class="slide"><img src="assets/pages/page-02.jpg" alt="我们是谁"></div>
+                <div class="slide"><img src="assets/pages/team-siyang.jpg" alt="斯洋"></div>
+                <div class="slide"><img src="assets/pages/team-xixi.jpg" alt="兮兮"></div>
+                <div class="slide"><img src="assets/pages/team-zhizhi.jpg" alt="知之"></div>
+                <div class="slide"><img src="assets/pages/team-nangai.jpg" alt="南栀"></div>
+                <div class="slide"><img src="assets/pages/team-jieke.jpg" alt="杰克"></div>
+            </div>
+            <div class="cnav"><button id="teamPrev">‹</button><div class="cdots" id="teamDots"></div><button id="teamNext">›</button></div>
+            <p class="chint">← 左右滑动 / 点击箭头切换 →</p>
+        </div>
+
+        <div class="carousel-block">
+            <div class="cb-head"><div class="bt">WHY US</div><h3>我们的优势</h3></div>
+            <div class="carousel" id="advCarousel">
+                <div class="slide"><img src="assets/pages/page-03.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-04.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-05.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-06.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-07.jpg" alt=""></div>
+            </div>
+            <div class="cnav"><button id="advPrev">‹</button><div class="cdots" id="advDots"></div><button id="advNext">›</button></div>
+            <p class="chint">← 左右滑动 / 点击箭头切换优势 →</p>
+        </div>
+
+        <div class="carousel-block">
+            <div class="cb-head"><div class="bt">CASES</div><h3>真实获客案例</h3></div>
+            <div class="carousel" id="caseCarousel">
+                <div class="slide"><img src="assets/pages/page-08.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-09.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-10.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-11.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-12.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-13.jpg" alt=""></div>
+                <div class="slide"><img src="assets/pages/page-14.jpg" alt=""></div>
+            </div>
+            <div class="cnav"><button id="casePrev">‹</button><div class="cdots" id="caseDots"></div><button id="caseNext">›</button></div>
+            <p class="chint">← 左右滑动 / 点击箭头切换案例 →</p>
+        </div>
+
+        <div class="page-card"><img src="assets/pages/page-15.jpg" alt=""></div>
+        <div class="page-card"><img src="assets/pages/page-16.jpg" alt=""></div>
+        <div class="page-card"><img src="assets/pages/page-17.jpg" alt=""></div>
+        <div class="page-card"><img src="assets/pages/page-18.jpg" alt=""></div>
+        <div class="page-card"><img src="assets/pages/page-delivery.jpg" alt=""></div>
+        <div class="page-card"><img src="assets/pages/page-19.jpg" alt=""></div>
+
+        <p class="foot-note">© 2025 斯洋流量学堂 SIYANG MEDIA · 专注小红书企业获客增长</p>
+    </div>
+</section>
+
+<!-- ===== TEXT VIEW ===== -->
+<section id="view-text" class="view">
+    <div class="text-wrap">
+        <div class="t-hero">
+            <h2>小红书企业获客增长陪跑</h2>
+            <p>不是IP陪跑 · 只做真实获客结果</p>
+            <p>陪跑1个企业号，帮助跑通获客链路</p>
+            <div class="price"><b>3980</b> 元 / 季度</div>
+        </div>
+
+        <div class="t-block">
+            <h3>核心团队</h3>
+            <div class="t-case"><div class="cn">斯洋</div><div class="cd">主理人，8年新媒体运营经验，5年小红书商业获客经验，深度陪跑企业获客增长。</div></div>
+            <div class="t-case"><div class="cn">兮兮</div><div class="cd">核心成员，擅长小红书内容策略与用户洞察，精准把握获客方向。</div></div>
+            <div class="t-case"><div class="cn">知之</div><div class="cd">核心成员，专注数据复盘与投放优化，持续降低获客成本。</div></div>
+            <div class="t-case"><div class="cn">南栀</div><div class="cd">核心成员，负责私域承接与转化链路搭建，提升咨询到成交效率。</div></div>
+            <div class="t-case"><div class="cn">杰克</div><div class="cd">核心成员，AI工具应用与智能体搭建，助力企业高效运营。</div></div>
+        </div>
+
+        <div class="t-block">
+            <h3>我们是谁</h3>
+            <p>我们是一支专注企业互联网获客增长的团队：</p>
+            <ul class="t-list">
+                <li><b>8年</b>新媒体运营经验</li>
+                <li><b>5年</b>小红书商业获客经验</li>
+                <li>服务过旅游、房产、教育、摄影、大健康、留学、签证、实体门店等<b>多行业</b></li>
+                <li>不追求单纯曝光，更关注<b>咨询数量、客户质量、成交效率</b></li>
+                <li>资质：小红书营销人才认证、巨量引擎数字营销认证、百度AI营销顾问认证</li>
+            </ul>
+        </div>
+
+        <div class="t-block">
+            <h3>我们的优势</h3>
+            <ul class="t-list">
+                <li><b>不做传统代运营，只做获客增长</b>：围绕曝光→搜索→咨询→转化，搭建企业完整获客链路</li>
+                <li><b>小预算测试，降低试错成本</b>：先验证内容、人群和方向，再放大有效模型</li>
+                <li><b>5人团队深度陪跑</b>：不做流水线服务，每个企业结合业务深度优化</li>
+                <li><b>AI工具辅助，提升效率</b>：赠送企业专属智能体，解决选题、素材、钩子、私域问题</li>
+            </ul>
+        </div>
+
+        <div class="t-block">
+            <h3>服务流程（7步）</h3>
+            <ol class="t-steps">
+                <li><b>客户人群画像调研</b>目标客户、需求场景、决策因素、搜索关键词、竞品分析</li>
+                <li><b>企业号搭建优化</b>认证企业号，开通聚光与合规导流微信卡</li>
+                <li><b>1V1定制执行方案</b>腾讯会议深度定制内容、选题、关键词、投放、私域</li>
+                <li><b>发布笔记 + 基建</b>发布营销笔记，完善首页基建与搜索布局</li>
+                <li><b>聚光投流</b>测试内容方向与高咨询素材，优化人群、放大模型</li>
+                <li><b>账号数据复盘</b>复盘浏览、点击、咨询、开口成本与咨询质量</li>
+                <li><b>细节优化</b>持续优化笔记表达、封面、私信承接、转化链路</li>
+            </ol>
+        </div>
+
+        <div class="t-block">
+            <h3>真实获客案例</h3>
+            <div class="t-case"><div class="cn">摄影工作室</div><div class="cd">开口成本 78→20+，进来的几乎都是真实拍照客户，6月预约基本饱和。</div></div>
+            <div class="t-case"><div class="cn">独立英语老师（同城到店）</div><div class="cd">推广投入 3200元，成交 7人，业绩 5万，投产比连续两月 1:10+。</div></div>
+            <div class="t-case"><div class="cn">新加坡租房（从0起盘）</div><div class="cd">704组付费咨询，微付总投入约8000元，综合成交约30单，总签约租金 124.3万。</div></div>
+            <div class="t-case"><div class="cn">广州租房（图文获客）</div><div class="cd">咨询量 1952，加V量 1563，成交量 78，佣金业绩 8.9万。</div></div>
+            <div class="t-case"><div class="cn">签证服务（高客单）</div><div class="cd">私信量 376，加V量 268，成交 26单，回款金额 18.57万。</div></div>
+            <div class="t-case"><div class="cn">娱乐主播招聘</div><div class="cd">日均稳定咨询 20+，支撑团队规模扩张。</div></div>
+            <div class="t-case"><div class="cn">大健康</div><div class="cd">17天咨询量 843，进线 842人，单日峰值咨询 75。</div></div>
+        </div>
+
+        <div class="t-block">
+            <h3>合作方式</h3>
+            <p><b>3980元 / 季度</b>，包含完整服务：</p>
+            <div class="t-tags">
+                <span>客户画像分析</span><span>聚光投流</span><span>企业号搭建</span><span>数据复盘</span>
+                <span>1V1定制方案</span><span>细节优化</span><span>发布笔记+基建</span><span>定制AI智能体</span>
+            </div>
+            <p style="margin-top:12px;">适合：<b>有产品、有团队、希望长期通过小红书获客</b>的企业。</p>
+            <p>我们不承诺爆款，因为企业真正需要的不是一次流量，而是一套可持续获客的增长系统。</p>
+        </div>
+
+        <div class="t-cta">
+            <h3>让小红书变成你的获客渠道</h3>
+            <p>不是IP陪跑 · 只做真实获客结果</p>
+        </div>
+
+        <p class="foot-note">© 2025 斯洋流量学堂 SIYANG MEDIA · 专注小红书企业获客增长</p>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-nav lb-next" id="lbNext">›</button>
+    <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<script>
+// toggle views
+document.querySelectorAll('.toggle-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const v=btn.dataset.view;
+        document.querySelectorAll('.view').forEach(s=>s.classList.remove('active'));
+        document.getElementById('view-'+v).classList.add('active');
+        window.scrollTo({top:0});
+    });
+});
+
+// generic carousel
+function initCarousel(carId, prevId, nextId, dotsId){
+    const cc=document.getElementById(carId);
+    if(!cc) return;
+    const slides=[...cc.children];
+    const dotsBox=document.getElementById(dotsId);
+    slides.forEach((_,i)=>{const d=document.createElement('div');d.className='d'+(i===0?' on':'');d.addEventListener('click',()=>go(i));dotsBox.appendChild(d);});
+    const dots=[...dotsBox.children];
+    function step(){const s=slides[0];const g=parseFloat(getComputedStyle(cc).gap)||14;return s.getBoundingClientRect().width+g;}
+    function idx(){return Math.round(cc.scrollLeft/step());}
+    function go(i){i=Math.max(0,Math.min(slides.length-1,i));cc.scrollTo({left:i*step(),behavior:'smooth'});}
+    function upd(){const i=idx();dots.forEach((d,k)=>d.classList.toggle('on',k===i));}
+    document.getElementById(prevId).addEventListener('click',()=>go(idx()-1));
+    document.getElementById(nextId).addEventListener('click',()=>go(idx()+1));
+    cc.addEventListener('scroll',()=>{clearTimeout(cc._t);cc._t=setTimeout(upd,80);});
+}
+initCarousel('advCarousel','advPrev','advNext','advDots');
+initCarousel('caseCarousel','casePrev','caseNext','caseDots');
+initCarousel('teamCarousel','teamPrev','teamNext','teamDots');
+
+// ===== LIGHTBOX (click to zoom) =====
+const lb=document.getElementById('lightbox');
+const lbImg=document.getElementById('lbImg');
+const lbClose=document.getElementById('lbClose');
+const lbPrev=document.getElementById('lbPrev');
+const lbNext=document.getElementById('lbNext');
+const lbCounter=document.getElementById('lbCounter');
+
+// collect all carousel images into a flat list with their source
+let lbImages=[];
+document.querySelectorAll('.carousel .slide img').forEach(img=>{
+    lbImages.push(img.src);
+    img.addEventListener('click',()=>openLb(lbImages.indexOf(img.src)));
+});
+// also allow page-card images
+document.querySelectorAll('.page-card img').forEach(img=>{
+    if(!lbImages.includes(img.src)) lbImages.push(img.src);
+    img.addEventListener('click',()=>openLb(lbImages.indexOf(img.src)));
+});
+
+let lbIdx=0;
+function openLb(i){
+    lbIdx=i;
+    showLb();
+    lb.classList.add('show');
+    document.body.style.overflow='hidden';
+}
+function showLb(){
+    lbImg.src=lbImages[lbIdx];
+    lbCounter.textContent=(lbIdx+1)+' / '+lbImages.length;
+}
+function closeLb(){
+    lb.classList.remove('show');
+    document.body.style.overflow='';
+}
+lbClose.addEventListener('click',closeLb);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+lbPrev.addEventListener('click',()=>{lbIdx=(lbIdx-1+lbImages.length)%lbImages.length;showLb();});
+lbNext.addEventListener('click',()=>{lbIdx=(lbIdx+1)%lbImages.length;showLb();});
+document.addEventListener('keydown',e=>{
+    if(!lb.classList.contains('show')) return;
+    if(e.key==='Escape') closeLb();
+    if(e.key==='ArrowLeft'){lbIdx=(lbIdx-1+lbImages.length)%lbImages.length;showLb();}
+    if(e.key==='ArrowRight'){lbIdx=(lbIdx+1)%lbImages.length;showLb();}
+});
+</script>
+
+</body>
+</html>
