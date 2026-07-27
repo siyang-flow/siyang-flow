@@ -176,6 +176,17 @@
         <div class="page-card"><img src="assets/pages/page-16.jpg" alt=""></div>
         <div class="page-card"><img src="assets/pages/page-17.jpg" alt=""></div>
         <div class="page-card"><img src="assets/pages/page-18.jpg" alt=""></div>
+
+        <div class="carousel-block">
+            <div class="cb-head"><div class="bt">AI AGENT</div><h3>专属AI获客智能体</h3></div>
+            <div class="carousel" id="aiCarousel">
+                <div class="slide"><img src="assets/pages/team-ai-1.jpg" alt="AI智能体"></div>
+                <div class="slide"><img src="assets/pages/team-ai-2.jpg" alt="18项AI获客能力"></div>
+            </div>
+            <div class="cnav"><button id="aiPrev">‹</button><div class="cdots" id="aiDots"></div><button id="aiNext">›</button></div>
+            <p class="chint">← 左右滑动 / 点击箭头切换 →</p>
+        </div>
+
         <div class="page-card"><img src="assets/pages/page-delivery.jpg" alt=""></div>
         <div class="page-card"><img src="assets/pages/page-19.jpg" alt=""></div>
 
@@ -309,6 +320,7 @@ function initCarousel(carId, prevId, nextId, dotsId){
 initCarousel('advCarousel','advPrev','advNext','advDots');
 initCarousel('caseCarousel','casePrev','caseNext','caseDots');
 initCarousel('teamCarousel','teamPrev','teamNext','teamDots');
+initCarousel('aiCarousel','aiPrev','aiNext','aiDots');
 
 // ===== LIGHTBOX (click to zoom) =====
 const lb=document.getElementById('lightbox');
